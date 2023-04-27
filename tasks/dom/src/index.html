@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <title>Basic HTML page</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>DOM</h1>
+
+    <p>
+      To see your JavaScript code output, please, open browser console by
+      pressing F12.
+    </p>
+
+    <script type="module">
+      import { createToast } from "./createToast.js";
+
+      let element = document.createElement("span");
+      element.textContent = "I am toast.";
+
+      let toastElement = createToast(element);
+
+      document.body.append(toastElement);
+    </script>
+  </body>
+</html>
